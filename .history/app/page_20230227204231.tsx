@@ -3,8 +3,7 @@
 import AddPost from "./components/AddPost";
 import axios from "axios";
 import { useQuery } from "react-query"
-import Post from "./components/Post"
-
+import Post from "./components/"
 const allPosts = async () => {
   const response = await axios.get("/api/posts/getPosts");
   return response.data;
@@ -21,9 +20,6 @@ export default function Home() {
   return (
     <main>
       <AddPost />
-      {data?.map((post) => (
-        <Post key={post.id} name={post.user.name} avatar={post.user.image} postTitle={post.title} id={post.id}/>
-      ))}
     </main>
   );
 }

@@ -16,7 +16,6 @@ export default function Post({name, avatar, postTitle, id})
         </div>
         <div className="flex gap-4 cursor-pointer items-center">
             <Link href={`/post/${id}`}>
-                <p className="text-sm font-bold text-gray-700">Comments</p>
             </Link>
         </div>
       </div>

@@ -19,7 +19,6 @@ model Post {
   published Boolean  @default(false)
   userId    String
   user      User    @relation(fields: [userId], references: [id])
-  Comment       Comment[]
 }
 
 model Account {
@@ -67,7 +66,6 @@ model User {
   accounts      Account[]
   sessions      Session[]
   Post          Post[]
-  Comment       Comment[]
 }
 
 model VerificationToken {

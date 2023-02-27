@@ -19,7 +19,6 @@ model Post {
   published Boolean  @default(false)
   userId    String
   user      User    @relation(fields: [userId], references: [id])
-  Comment       Comment[]
 }
 
 model Account {
@@ -55,8 +54,6 @@ model Comment {
   postId        String
   userId        String
   createdAt     DateTime @default(now())
-  post          Post     @relation(fields: [postId], references: [id])
-  user          User    @relation(fields: [userId], references: [id])
 }
 model User {
   id            String    @id @default(cuid())
@@ -67,7 +64,6 @@ model User {
   accounts      Account[]
   sessions      Session[]
   Post          Post[]
-  Comment       Comment[]
 }
 
 model VerificationToken {

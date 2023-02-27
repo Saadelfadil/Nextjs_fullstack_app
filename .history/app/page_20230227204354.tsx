@@ -22,7 +22,7 @@ export default function Home() {
     <main>
       <AddPost />
       {data?.map((post) => (
-        <Post key={post.id} name={post.user.name} avatar={post.user.image} postTitle={post.title} id={post.id}/>
+        <Post />
       ))}
     </main>
   );
