@@ -28,7 +28,7 @@ export default async function handler(
         if (!title.length)
             return res.status(401).json({message: "Please don't leave this empty."});
 
-        const result = await prisma.Comment.create({
+        const result = await prisma.comment.create({
             data: {
                 message: title,
                 userId: user?.id,

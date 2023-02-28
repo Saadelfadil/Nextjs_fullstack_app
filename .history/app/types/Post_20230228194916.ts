@@ -12,7 +12,7 @@ export type PostTy = {
         createdAt?: string,
         id: string,
         postId: string,
-        message: string,
+        m: string,
         userId: string,
         user: {
             email: string,

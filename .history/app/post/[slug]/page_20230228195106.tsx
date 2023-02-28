@@ -46,7 +46,7 @@ export default function PostDetails(url: URL) {
               alt="avatar"
             />
             <h3 className="font-bold text-gray-700">{com?.user?.name}</h3>
-            <h2 className="text-sm">{com.createdAt}</h2>
+            <h2 className="text-sm">{com.createdAt.}</h2>
           </div>
           <div className="py-4">{com.message}</div>
         </div>

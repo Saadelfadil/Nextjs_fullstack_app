@@ -32,7 +32,6 @@ export default function AddComment({ id } : PostProps) {
         },
         onSuccess: (data) => {
           setTitle((pre) => (pre = ""));
-          queryClient.invalidateQueries(["detail-post"])
           setIsDisabled((pre) => (pre = false));
           toast.success("Added your comment", { id: commentToastId });
         },
@@ -61,6 +60,7 @@ export default function AddComment({ id } : PostProps) {
         </div>
         <div className="flex items-center gap-2">
           <button
+            onClick={handleSubmit}
             disabled={isDisabled}
             className="text-sm bg-teal-600 text-white rounded-xl py-2 px-6 disabled:opacity-25"
             type="submit"

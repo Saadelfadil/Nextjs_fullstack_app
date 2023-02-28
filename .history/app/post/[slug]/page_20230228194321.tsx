@@ -34,23 +34,18 @@ export default function PostDetails(url: URL) {
         postTitle={data?.title}
         comments={data?.Comment}
       />
-      <AddComment id={data?.id} />
-      {data?.Comment?.map((com) => (
-        <div key={com.id} className="my-6 bg-white p-8 rounded-md">
-          <div className="flex items-center gap-2">
-            <Image
-              className="rounded-full"
-              width={24}
-              height={24}
-              src={com.user?.image}
-              alt="avatar"
-            />
-            <h3 className="font-bold text-gray-700">{com?.user?.name}</h3>
-            <h2 className="text-sm">{com.createdAt}</h2>
-          </div>
-          <div className="py-4">{com.message}</div>
-        </div>
-      ))}
+      <AddComment id={data?.id}/>
+      {data?.Comment?.map((com) => {
+        <div></div>
+        // <div key={com.id} className="my-6 bg-white p-8 rounded-md">
+        //   <div className="flex items-center gap-2">
+        //     <Image width={24} height={24} src={com.user?.image} alt="avatar" />
+        //     <h3 className="font-bold">{com?.user?.name}</h3>
+        //     <h2 className="text-sm">{com.createdAt}</h2>
+        //   </div>
+        //   <div className="py-4">{com.title}</div>
+        // </div>
+      })}
     </div>
   );
 }
