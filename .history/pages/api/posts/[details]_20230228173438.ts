@@ -1,0 +1,18 @@
+import type { NextApiRequest, NextApiResponse } from "next";
+import prisma from "../../../prisma/client";
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+    // 
+  if (req.method === "GET") {
+    cf (!session) return res.status(401).json({ message: "Please sign in" });
+    try {
+        
+        // res.status(200).json(result);
+    } catch (error) {
+      res.status(403).json({ err: "Error fetching posts" });
+    }
+  }
+}
